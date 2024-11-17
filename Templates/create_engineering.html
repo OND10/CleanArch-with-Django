@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Engineering</title>
+</head>
+<body>
+    <h1>Create Engineering</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Save Engineering">
+    </form>
+    <a href="{% url 'people:view_engineerings' %}">View All Engineerings</a>
+</body>
+</html>

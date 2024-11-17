@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Engineerings</title>
+</head>
+<body>
+    <h1>All Engineerings</h1>
+    <table border="1">
+        <tr>
+            <th>Person</th>
+            <th>Description</th>
+        </tr>
+        {% for engineering in engineerings %}
+        <tr>
+            <td>{{ engineering.person.name }}</td>
+            <td>{{ engineering.description }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'people:create_engineering' %}">Create New Engineering</a>
+</body>
+</html>

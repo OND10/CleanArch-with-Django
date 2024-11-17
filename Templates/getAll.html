@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Persons</title>
+</head>
+<body>
+    <h1>All Persons</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Profession</th>
+            <th>Image</th>
+        </tr>
+        {% for person in result %}
+        <tr>
+            <td>{{ person.name }}</td>
+            <td>{{ person.age }}</td>
+            <td>{{ person.profession }}</td>
+            <td>
+                {{person.image}}
+                {% if person.image %}
+                    <img src="{{ person.image }}" alt="{{ person.name }}" width="100">
+                {% else %}
+                    
+                    No image available
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

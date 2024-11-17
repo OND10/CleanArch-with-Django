@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Subjects</title>
+</head>
+<body>
+    <h1>Student Subjects</h1>
+    <table>
+        <tr>
+            <th>Student</th>
+            <th>Subject</th>
+            <th>Enrollment Date</th>
+        </tr>
+        {% for student_subject in student_subjects %}
+        <tr>
+            <td>{{ student_subject.student.name }}</td>
+            <td>{{ student_subject.subject.name }}</td>
+            <td>{{ student_subject.enrollment_date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'people:student_subject_create' %}">Add New Enrollment</a>
+</body>
+</html>
