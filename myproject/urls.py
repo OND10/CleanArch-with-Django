@@ -21,6 +21,6 @@ from people.Presentation  import views as people_view
 urlpatterns = [
     path('', people_view.index, name='index'),
     path('admin/', admin.site.urls),
-    path('people/', include('people.urls', namespace= 'people')),
+    path('people/', include('people.Application.urls', namespace= 'people')),
     path('book/', include('book.urls', namespace = 'book'))
 ]

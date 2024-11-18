@@ -54,7 +54,21 @@ class BookView(View):
 
 
 
-
+def apply_raise(request, precentage : int):
+    
+    try:
+        
+        multiplier = 1 + (precentage/100)
+        employees = app_models.Employee.objects.all()
+        
+        for employee in employees:
+            employee.salary = multiplier
+            employee.save()
+    
+        return JsonResponse({'status': 'success', 'message': f'Salaries increased by {precentage}%.'})
+    
+    except Exception as e:
+        return JsonResponse({'status': 'error', 'message': str(e)})    
 
 def getAll(request):
     result = Person.objects.all()

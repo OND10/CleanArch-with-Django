@@ -8,4 +8,6 @@ admin.site.register(Student)
 admin.site.register(Subject)
 admin.site.register(StudentSubject)
 admin.site.register(app_modles.BookModel)
+admin.site.register(app_modles.AuthorMoel)
+admin.site.register(app_modles.Employee)
 

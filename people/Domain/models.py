@@ -48,6 +48,20 @@ class BookModel(models.Model):
     def __str__(self):
         return self.title
 
+class AuthorMoel(models.Model):
+    name = models.CharField(max_length=30)
+    birth_date = models.DateField()
+    
+    def __str__(self):
+        return self.name
+
+class Employee(models.Model):
+    name = models.CharField(max_length=40)
+    salary = models.FloatField()
+    
+    def __str__(self):
+        return self.name
+
 
 # def students():
 #     return Student.objects.all()
