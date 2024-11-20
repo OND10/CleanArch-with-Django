@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'book',
     'corsheaders',
-    'people.Infrastructure.Configuration.apps.PeopleConfig'
+    # 'people.Infrastructure.Configuration.apps.PeopleConfig',
+    'people'
 ]
 
 
@@ -55,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'people.middleware.JWTAuthenticationMiddleware',
 ]
 
 ROOT_URLCONF = 'myproject.urls'
@@ -129,6 +131,9 @@ STATIC_URL = 'static/'
 MEDIA_URL = 'media/'
 MEDIA_ROOT = MEDIA_DIR
 
+
+AUTH_USER_MODEL = 'people.User'
+SECRET_KEY = 'ai0eobey86soimfxb6ax4uqdmo49yiauxchgnspsh'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

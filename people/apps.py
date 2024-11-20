@@ -8,4 +8,4 @@ class PeopleConfig(AppConfig):
     migrations_module = 'people.Infrastructure.migrations'
 
     def ready(self):
-        import people.Infrastructure.admin
+        import people.admin

@@ -1,6 +1,6 @@
 from people.Domain.Interfaces.IBookRepository import IBookRepository
 from people.Domain.Entities.Book import Book
-from people.Domain.models import BookModel  # Django model
+from people.models import BookModel  # Django model
 from typing import List
 
 class BookRepository(IBookRepository):
